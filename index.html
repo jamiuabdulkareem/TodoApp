@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1>Todo App</h1>
+      <form class="task__form">
+        <input type="text" class="task__input" />
+        <button class="task__btn">
+          <ion-icon class="task__btn--icon" name="add-circle"></ion-icon>
+        </button>
+      </form>
+
+      <div class="task">
+        <ul class="task__list">
+          <li class="task__list--item">
+            <p>Coding</p>
+            <ion-icon class="delete__btn" name="trash-outline"></ion-icon>
+          </li>
+
+          <li class="task__list--item">
+            <p>Coffee time</p>
+            <ion-icon class="delete__btn" name="trash-outline"></ion-icon>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
