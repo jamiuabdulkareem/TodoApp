@@ -4,7 +4,7 @@ const taskContainer = document.querySelector(".task");
 const taskInput = document.querySelector(".task__input");
 const taskBtn = document.querySelector(".task__btn");
 
-const task = ["coding", "Programming"];
+let task = [];
 
 const displayTask = function (display) {
   taskContainer.innerHTML = "";
@@ -21,4 +21,13 @@ const displayTask = function (display) {
   });
 };
 
-console.log(displayTask(task));
+displayTask(task);
+
+taskBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const addTask = taskInput.value;
+  task.push(addTask);
+
+  displayTask(task);
+  taskInput.value = "";
+});
