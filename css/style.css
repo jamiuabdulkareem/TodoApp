@@ -105,6 +105,7 @@ h1 {
 }
 
 .delete__btn {
+  display: block;
   color: #c30707;
   cursor: pointer;
 }
