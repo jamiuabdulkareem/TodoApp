@@ -3,10 +3,12 @@
 const taskContainer = document.querySelector(".task");
 const taskInput = document.querySelector(".task__input");
 const taskBtn = document.querySelector(".task__btn");
-const btn = document.querySelector("#btnDele");
+const deleteBtn = document.querySelector("#btnDele");
 const listItem = document.getElementById("list");
 
 let task = [];
+
+// console.log(deleteBtn);
 
 const displayTask = function (display) {
   taskContainer.innerHTML = "";
@@ -15,13 +17,18 @@ const displayTask = function (display) {
     const html = `<ul class="task__list">
     <li class="task__list--item">
       <p id="list">${list}</p>
-      <button type="button" id="btnDele">
+      <div id="btnDele">
       <ion-icon class="delete__btn" name="trash-outline"></ion-icon>
-      </button>
+      </div>
     </li>
   </ul>`;
 
     taskContainer.insertAdjacentHTML("afterbegin", html);
+
+    document.querySelector("#btnDele").addEventListener("click", function () {
+      task.shift();
+      displayTask(task);
+    });
   });
 };
 
